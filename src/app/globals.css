@@ -1,0 +1,142 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main-wrapper {
+  min-height: 100vh;
+}
+
+.screen-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-greeting {
+  margin-top: 0.75rem;
+  color: #6e6e6e;
+}
+
+.dashboard-greeting strong {
+  color: #343a40;
+}
+
+.topbar-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topbar-menu-btn {
+  color: #CB252E;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.topbar-menu-btn:hover,
+.topbar-menu-btn:focus {
+  color: #CB252E;
+  text-decoration: none;
+}
+
+.cm-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1100;
+}
+
+.cm-modal-card {
+  width: 100%;
+  max-width: 460px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+.h5-heading {
+  font-weight: 600;
+  font-size: 20px;
+}
+@media only screen and (max-width: 47.9375rem) {
+  .dashboard-greeting {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Keep sidebar usable when menu grows (currencies/languages/etc.). */
+.deznav {
+  height: 100vh !important;
+}
+
+.deznav .deznav-scroll {
+  height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content-body img {
+  cursor: zoom-in;
+}
+
+.global-image-preview-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.global-image-preview-image {
+  max-width: 95vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.global-image-preview-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 42px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Keep all bootstrap-like modals within viewport and scroll long content */
+.modal.show {
+  overflow-y: auto;
+}
+
+.modal.show .modal-dialog {
+  margin: 1rem auto;
+  max-height: calc(100vh - 2rem);
+}
+
+.modal.show .modal-content {
+  max-height: calc(100vh - 2rem);
+  overflow: hidden;
+}
+
+.modal.show .modal-body {
+  overflow-y: auto;
+}

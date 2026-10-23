@@ -1,0 +1,14 @@
+services:
+  admin-next:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: admin-next
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      HOSTNAME: 0.0.0.0
+      API_URL: ${API_URL:-https://api.dev.camiontrading.com}
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://api.dev.camiontrading.com}
+    restart: unless-stopped
